@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../fileCSS/style.css">
+
+    <title>Registrazione</title>
+</head>
+<body>
+    
+    
+    <div class = "wrapper">
+        <div class = "form-container">
+            <h1>Registrazione</h1>
+            <div class = "form-box">
+                <form id="form" action="../fileJSP/checkRegistrazione.jsp">
+
+                    <div class = "input-field">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" placeholder = "Mario">
+                        <small>placeholder</small>
+                    </div>
+
+                    <div class = "input-field">
+                        <label for="cognome">Cognome</label>
+                        <input type="text" id="cognome" name="cognome" placeholder = "Rossi">
+                        <small>placeholder</small>
+                    </div>
+                    
+                    <div class="input-field">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email" placeholder = "email@email.com" autocomplete="off" >
+                        <small id="errore-email">Errore</small>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                    </div>
+
+                    <div class="input-field">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder = "********" autocomplete="off" >
+                        <small id="errore-password">Errore</small>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                    </div>
+
+                    <div class="input-field">
+                        <label for="password2">Conferma password</label>
+                        <input type="password" id="password2" name="password2" placeholder = "********" autocomplete="off" >
+                        <small id="errore-password2">Errore</small>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                    </div>
+
+                    <div class="input-field">
+                        <button type="submit">Registrati e accedi</button>
+                    </div>
+                </form>
+            </div>
+            <p class="text">Se hai già un account, <a href="login.html">accedi</a></p>
+
+        </div>
+    </div>
+    
+    
+    <script src="../fileJS/scriptRegistrazione.js"></script>
+    <script>
+        window.onload = function() {
+            if (performance.navigation.type === 1) {
+                window.location.href = "registrazione.html";
+            }
+        }
+    </script>
+    
+</body>
+</html>
